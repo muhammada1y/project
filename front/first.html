@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+    <title>Document</title>
+<style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      color: rgb(58, 139, 68);
+      padding: 20px;
+    }
+
+    .header-title {
+      font-size: 24px;
+      margin-right: 20px;
+    }
+
+    .centered-button {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+    }
+    .centered-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.centered-button:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.centered-button:hover span {
+  padding-right: 25px;
+}
+  </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="header-title">CV MAKER</h1>
+   <button class="centered-button"  id="but" onclick="cv-user" ><span>click</span></button>
+    </div>
+   
+</body>
+<script>
+  document.getElementById("but").addEventListener("click", function () {
+      window.location.href = "form.html";
+  });
+</script>
+</html>

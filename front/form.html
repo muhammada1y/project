@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+    <div class="section-container">
+        <h2>Personal Information</h2>
+        <!-- Personal Information form -->
+        <form id="form1" action="/" method="post" >
+            <div id="ima">
+            
+                <label for="images" id="Up" >Upload picture</label>
+            
+           
+            </div>
+            <div class="profile-photo" id="imgbox">
+                
+                
+                <input type="file" id="images" name="image" style="display: none;" onchange="LoadFile(event)">
+               
+            </div>
+            
+            
+            <label for="name">Name:</label>
+            <input type="text" class="Name" name="Name" id="Names">
+          
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob">
+          
+            <label for="cnic">CNIC:</label>
+            <input type="text" id="cnic" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+          
+            <label for="phone_number">Phone No:</label>
+            <input type="number" id="phone_number">
+          
+            <label for="address">Address:</label>
+            <input type="text" id="address">
+    </div>
+
+    <div class="section-container">
+        <h2>Education</h2>
+        <!-- Education form -->
+      
+            <label for="school">School/college/uni:</label>
+            <input type="text" id="school" name="school">
+
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree">
+
+            
+
+            <label for="dates">Dates Attended/Graduation Date:</label>
+            <input type="text" id="dates" name="dates">
+
+
+            <label for="gpa">percentage:</label>
+            <input type="number" id="gpa" name="gpa" step="0.01">
+
+    </div>
+
+    <div class="section-container">
+        <h2>Work Experience</h2>
+        <!-- Work Experience form -->
+        
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company">
+
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title">
+
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+
+           
+      
+    </div>
+
+    <div class="section-container">
+        <h2>Skills</h2>
+        <!-- Skills form -->
+        
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" rows="4"></textarea>
+
+            <button type="submit" onclick="sho(event)">submit</button>
+
+        </form>
+    </div>
+
+    <script >
+        var imgbox = document.getElementById("imgbox");
+var LoadFile = function (event) {
+  imgbox.style.backgroundImage =
+    "URL(" + URL.createObjectURL(event.target.files[0]) + ")";
+};
+
+function sho(){
+  
+  var userInput = document.getElementById("Names").value;
+  alert("Name: " + userInput );
+}
+  
+    </script>
+</body>
+</html>

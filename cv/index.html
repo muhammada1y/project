@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CV</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+      <h1>John Doe</h1>
+      <p>Web Developer</p>
+    </div>
+
+    <div class="section">
+      <h2>Personal Information</h2>
+      <ul>
+        <li><strong>Address:</strong> 123 Main St, City, Country</li>
+        <li><strong>Email:</strong> john.doe@example.com</li>
+        <li><strong>Phone:</strong> (123) 456-7890</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <h3>University of Example</h3>
+          <p>Bachelor of Science in Computer Science</p>
+          <p>Year: 20XX</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <h3>ABC Company</h3>
+          <p>Web Developer</p>
+          <p>Year: 20XX - Present</p>
+          <ul>
+            <li>Developed and maintained company websites</li>
+            <li>Collaborated with the design team to create user-friendly interfaces</li>
+            <li>Implemented responsive designs for mobile optimization</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="download-button">
+      <button onclick="downloadCV()">Download CV</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
